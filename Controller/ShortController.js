@@ -10,7 +10,7 @@ const createShortId = async (req, res) => {
     }
 
     const shortId = shortid.generate();
-    const shortUrl = `${process.env.BASE_URL}${shortId}`;
+    const shortUrl = `${process.env.BASE_URL}/${shortId}`;
 
     await Url.create({ longUrl, shortId });
 
