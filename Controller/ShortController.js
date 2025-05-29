@@ -10,9 +10,8 @@ const createShortId = async (req, res) => {
     }
 
     const shortId = shortid.generate();
-    const shortUrl = `process.env.BASE_URL${shortId}`;
+    const shortUrl = `${process.env.BASE_URL}${shortId}`;
 
-    // You might want to save the URL mapping to DB here:
     await Url.create({ longUrl, shortId });
 
     res.status(201).json({
@@ -21,6 +20,7 @@ const createShortId = async (req, res) => {
         shortUrl
     });
 };
+
 
 const sendRequest = async (req, res) => {
     const { shortId } = req.params; 
