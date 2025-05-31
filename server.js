@@ -10,9 +10,12 @@ const cors = require('cors');
 
 
 app.use(cors({
-  origin: 'https://url-shortener-gcas.vercel.app', // ✅ Your actual frontend domain
-  credentials: true
+  origin: 'https://url-shortener-gcas.vercel.app',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 
 
 // Connect to MongoDB
