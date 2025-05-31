@@ -7,7 +7,13 @@ const  ShortID = require('./Routes/Short');
 const AuthRoute = require('./Routes/authRoute')
 
 const cors = require('cors');
-app.use(cors());
+
+
+app.use(cors({
+  origin: 'https://url-shortener-gcas.vercel.app', // ✅ Your actual frontend domain
+  credentials: true
+}));
+
 
 // Connect to MongoDB
 const connectDb = async () => {
