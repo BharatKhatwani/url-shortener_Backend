@@ -13,7 +13,7 @@ app.use(cors({
   origin: 
     'https://url-shortener-fe18.vercel.app',  // ✅ Vercel frontend
             // ✅ Local testing (optional)
-  ,
+  
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
