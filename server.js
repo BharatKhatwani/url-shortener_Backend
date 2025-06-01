@@ -10,7 +10,7 @@ const cors = require('cors');
 
 
 app.use(cors({
- origin: 'https://url-shortener-gcas.vercel.app',
+ origin: 'url-shortener-coral-xi.vercel.app',
 
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
